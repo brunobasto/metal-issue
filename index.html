@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Metal Issues</title>
+</head>
+<body>
+
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+	<script src="bower_components/soyutils/soyutils.js"></script>
+	<script src="https://rawgit.com/metal/steel-components/master/build/globals/steel.js"></script>
+
+	<button>Show Tooltip</button>
+
+	<script src="https://rawgit.com/launchpad-project/api.js/master/build/globals/api-min.js"></script>
+
+	<script type="text/javascript">
+	new steel.Tooltip({
+		content: 'Test',
+		selector: 'button',
+		visible: false,
+	}).render();
+	</script>
+</body>
+</html>

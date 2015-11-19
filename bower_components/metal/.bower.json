@@ -1,0 +1,25 @@
+{
+  "name": "metal",
+  "main": "src/core.js",
+  "description": "Build UI components in a solid, flexible way",
+  "keywords": [
+    "metal"
+  ],
+  "ignore": [
+    "*",
+    "!src/**/*"
+  ],
+  "dependencies": {
+    "soyutils": "2014.04.22"
+  },
+  "homepage": "https://github.com/metal/metal.js",
+  "_release": "f5bc884809",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f5bc884809a255e7f42c928754c68f8f6c2ce60c"
+  },
+  "_source": "git://github.com/metal/metal.js.git",
+  "_target": "master",
+  "_originalSource": "metal/metal.js"
+}

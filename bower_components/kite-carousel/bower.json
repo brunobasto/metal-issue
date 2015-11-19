@@ -1,0 +1,23 @@
+{
+  "name": "kite-carousel",
+  "version": "1.0.5",
+  "description": "Kite's carousel component",
+  "main": "src/Carousel.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "metal",
+    "kite"
+  ],
+  "ignore": [
+    "*",
+    "!build/**/*",
+    "!src/**/*",
+    "!test/**/*"
+  ],
+  "dependencies": {
+    "metal": "metal/metal.js#master",
+    "bootstrap": "~3.3.5"
+  }
+}

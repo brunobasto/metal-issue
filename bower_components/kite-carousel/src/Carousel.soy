@@ -1,0 +1,59 @@
+{namespace Templates.Carousel}
+
+/**
+ * This renders the main element
+ * @param height
+ * @param id
+ * @param items
+ * @param selectedIndex
+ */
+{template .content}
+	<div id="{$id}" class="carousel slide" data-ride="carousel">
+		{call .indicators data="all" /}
+		{call .items data="all" /}
+		{call .controls data="all" /}
+	</div>
+{/template}
+
+/**
+ * Carousel Controls
+ */
+{template .controls}
+	<a class="left carousel-control" data-onclick="prev" href="javascript:;" role="button">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" data-onclick="next" href="javascript:;" role="button">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+{/template}
+/**
+ * @param items
+ * @param selectedIndex
+ */
+{template .indicators}
+	<ol class="carousel-indicators">
+		{foreach $item in $items}
+			<li {if index($item) == $selectedIndex}class="active"{/if} data-onclick="_onClickIndicator"></li>
+		{/foreach}
+	</ol>
+{/template}
+
+/**
+ * @param height
+ * @param items
+ * @param selectedIndex
+ */
+{template .items}
+	<div class="carousel-inner" role="listbox">
+		{foreach $item in $items}
+			<div class="{if index($item) == $selectedIndex}active{/if} item item-{index($item)}" style="background-image: url({$item.src}); height: {$height};">
+				<div class="carousel-caption">
+					<h1 class="headline">{$item.headline}</h1>
+					<p class="body">{$item.body}</p>
+				</div>
+			</div>
+		{/foreach}
+	</div>
+{/template}
